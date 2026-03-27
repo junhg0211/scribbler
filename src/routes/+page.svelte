@@ -634,7 +634,7 @@
 	function onWheel(e: WheelEvent) {
 		e.preventDefault();
 		const delta = e.deltaY > 0 ? 0.9 : 1.1;
-		const newZoom = Math.max(0.1, Math.min(10, zoom * delta));
+		const newZoom = Math.max(0.1, Math.min(20, zoom * delta));
 		// 커서 위치 기준 줌
 		offsetX = e.clientX - (e.clientX - offsetX) * (newZoom / zoom);
 		offsetY = e.clientY - (e.clientY - offsetY) * (newZoom / zoom);
